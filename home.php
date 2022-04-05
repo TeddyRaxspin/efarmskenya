@@ -10,11 +10,6 @@ if(!isset($user_id)){
    header('location:login.php');
 };
 
-$farmer_id = $_SESSION['farmer_id'];
-if(!isset($farmer_id)){
-    header('location:login.php');
-};
-
 
 if(isset($_POST['add_to_wishlist'])){
 

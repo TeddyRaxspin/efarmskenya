@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bd9d111-1639-4f4b-8e75-6a1a9df3d840" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/farmer_header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmer_page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmer_products.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/farmer_update_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -73,7 +70,7 @@
       <updated>1648942496608</updated>
       <workItem from="1648942505420" duration="640000" />
       <workItem from="1649067913486" duration="595000" />
-      <workItem from="1649135709845" duration="7083000" />
+      <workItem from="1649135709845" duration="7906000" />
     </task>
     <servers />
   </component>

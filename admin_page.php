@@ -76,16 +76,16 @@ if(!isset($admin_id)){
       <a href="admin_orders.php" class="btn">see orders</a>
       </div>
 
-      <div class="box">
-      <?php
-         $select_products = $conn->prepare("SELECT * FROM `products`");
-         $select_products->execute();
-         $number_of_products = $select_products->rowCount();
-      ?>
-      <h3><?= $number_of_products; ?></h3>
-      <p>products added</p>
-      <a href="admin_products.php" class="btn">see products</a>
-      </div>
+<!--      <div class="box">-->
+<!--      --><?php
+//         $select_products = $conn->prepare("SELECT * FROM `products`");
+//         $select_products->execute();
+//         $number_of_products = $select_products->rowCount();
+//      ?>
+<!--      <h3>--><?//= $number_of_products; ?><!--</h3>-->
+<!--      <p>products added</p>-->
+<!--      <a href="admin_products.php" class="btn">see products</a>-->
+<!--      </div>-->
 
       <div class="box">
       <?php
