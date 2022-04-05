@@ -19,6 +19,8 @@ if(isset($_POST['submit'])){
    $image_tmp_name = $_FILES['image']['tmp_name'];
    $image_folder = 'uploaded_img/'.$image;
 
+   $user_type = $_POST['user_type'];
+
    $select = $conn->prepare("SELECT * FROM `users` WHERE email = ?");
    $select->execute([$email]);
 
@@ -28,11 +30,11 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $message[] = 'confirm password not matched!';
       }else{
-         $insert = $conn->prepare("INSERT INTO `users`(name, email, password, image) VALUES(?,?,?,?)");
-         $insert->execute([$name, $email, $pass, $image]);
+         $insert = $conn->prepare("INSERT INTO `users`(name, email, password, image, user_type) VALUES(?,?,?,?,?)");
+         $insert->execute([$name, $email, $pass, $image, $user_type]);
 
          if($insert){
-            if($image_size > 2000000){
+            if($image_size > 20000000){
                $message[] = 'image size is too large!';
             }else{
                move_uploaded_file($image_tmp_name, $image_folder);
@@ -89,6 +91,13 @@ if(isset($message)){
       <input type="password" name="pass" class="box" placeholder="enter your password" required>
       <input type="password" name="cpass" class="box" placeholder="confirm your password" required>
       <input type="file" name="image" class="box" required accept="image/jpg, image/jpeg, image/png">
+
+       <select  class="box" name="user_type" id="user_type">
+           <option value="">--Please choose an option--</option>
+           <option value="farmer">Farmer</option>
+           <option value="user">Customer</option>
+       </select>
+
       <input type="submit" value="register now" class="btn" name="submit">
       <p>already have an account? <a href="login.php">login now</a></p>
    </form>
