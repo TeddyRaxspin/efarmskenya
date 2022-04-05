@@ -8,6 +8,8 @@ if(isset($_POST['submit'])){
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    $email = $_POST['email'];
    $email = filter_var($email, FILTER_SANITIZE_STRING);
+   $phone_number = $_POST['phone_number'];
+   $gender = $_POST['gender'];
    $pass = md5($_POST['pass']);
    $pass = filter_var($pass, FILTER_SANITIZE_STRING);
    $cpass = md5($_POST['cpass']);
@@ -30,8 +32,8 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $message[] = 'confirm password not matched!';
       }else{
-         $insert = $conn->prepare("INSERT INTO `users`(name, email, password, image, user_type) VALUES(?,?,?,?,?)");
-         $insert->execute([$name, $email, $pass, $image, $user_type]);
+         $insert = $conn->prepare("INSERT INTO `users`(name, email, phone_number, gender, password, image, user_type) VALUES(?,?,?,?,?,?,?)");
+         $insert->execute([$name, $email, $phone_number, $gender, $pass, $image, $user_type]);
 
          if($insert){
             if($image_size > 20000000){
@@ -86,13 +88,19 @@ if(isset($message)){
 
    <form action="" enctype="multipart/form-data" method="POST">
       <h3>register now</h3>
-      <input type="text" name="name" class="box" placeholder="enter your name" required>
+      <input type="text" name="name" class="box" placeholder="enter your full names" required>
       <input type="email" name="email" class="box" placeholder="enter your email" required>
+      <input type="text" name="phone_number" class="box" placeholder="enter your phone number e.g 0722100200" required>
+       <select  class="box" name="gender" id="gender" required>
+           <option value="">--Please choose your Gender--</option>
+           <option value="male">Male</option>
+           <option value="female">Female</option>
+       </select>
       <input type="password" name="pass" class="box" placeholder="enter your password" required>
       <input type="password" name="cpass" class="box" placeholder="confirm your password" required>
       <input type="file" name="image" class="box" required accept="image/jpg, image/jpeg, image/png">
 
-       <select  class="box" name="user_type" id="user_type">
+       <select  class="box" name="user_type" id="user_type" required>
            <option value="">--Please choose an option--</option>
            <option value="farmer">Farmer</option>
            <option value="user">Customer</option>
