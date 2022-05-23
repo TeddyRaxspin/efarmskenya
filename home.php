@@ -102,7 +102,7 @@ if(isset($_POST['add_to_cart'])){
 
       <div class="content" >
 <!--         <span>your products, our market</span>-->
-          <h2>efarmskenya</h2>
+          <h2>Ngongveg</h2>
           <p>Your product...Our Digital Market</p>
 <!--         <a href="about.php" class="btn">about us</a>-->
       </div>
